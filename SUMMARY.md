@@ -1,6 +1,6 @@
 # Table of content
 
-* [gw-hlj-deployment](chapter1.md)
+* [gw-hlj-deployment](book/gw-hlj-deployment.md)
 * 
 
 
