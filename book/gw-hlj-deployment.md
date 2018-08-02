@@ -8,13 +8,11 @@ https://docs.openstack.org/ironic-python-agent/latest/admin/troubleshooting.html
 
 采用openssl passwd -1 123456 生成密码HASH值
 
-、、、
-
+```
 [root@docker ~]# openssl passwd -1 123456
-
-
 $1$EjlltJoH$kn6mNHbE7rZJFoXOnb4H40
-、、、
+```
+
 编辑：
 
 cd /httpboot/
@@ -46,3 +44,5 @@ vi inspector.ipxe
 
 /dev/sdo硬盘不存在
 /dev/sdf是系统盘，不能对其进行操作
+
+修改uos-storage.yaml
