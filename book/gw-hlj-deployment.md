@@ -44,4 +44,4 @@ vi inspector.ipxe
 ![](/assets/step3.jpeg)
 
 /dev/sdo硬盘不存在
-/dev/sdf是系统盘
+/dev/sdf是系统盘，不能对其进行操作
