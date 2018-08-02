@@ -14,12 +14,11 @@ $1$EjlltJoH$kn6mNHbE7rZJFoXOnb4H40
 ```
 
 编辑：
-
+```
 cd /httpboot/
-
 vi inspector.ipxe
+```
 ![](/assets/inspector.png)
-
 
 ##2.ipa-api-url报错
 
