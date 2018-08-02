@@ -20,8 +20,8 @@ $1$EjlltJoH$kn6mNHbE7rZJFoXOnb4H40
 cd /httpboot/
 
 vi inspector.ipxe
+![](/assets/inspector.png)
 
-![](/images/inspector.png)
 
 ##2.ipa-api-url报错
 
@@ -41,3 +41,7 @@ vi inspector.ipxe
 
 ##4.step3报错
 
+![](/assets/step3.jpeg)
+
+/dev/sdo硬盘不存在
+/dev/sdf是系统盘
