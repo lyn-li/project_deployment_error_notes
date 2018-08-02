@@ -27,6 +27,7 @@ vi inspector.ipxe
 ```
 [root@docker ~]# openssl passwd -1 123456  # -1 是数字1，不是字母l
 $1$EjlltJoH$kn6mNHbE7rZJFoXOnb4H40
+
 编辑inspector.ipxe文件，同时添加ipa-appi-url
 
 cd /httpboot/
