@@ -38,6 +38,7 @@ vi inspector.ipxe
 ##3.step2报错
 
 重新跑一遍deploy.sh脚本
+可能是因为mon服务还没起来就开始执行import keyring
 
 ##4.step3报错
 
