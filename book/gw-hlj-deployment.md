@@ -92,7 +92,9 @@ pcs resource restart hqproxy          使用pcs重启集群服务
 journalctl -u os-collect-config
 ```
 ## 9.
+```
 tar -zcvf <压缩后文件名> <需要压缩的文件或目录>
+```
 
 
 
