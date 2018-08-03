@@ -1,4 +1,4 @@
-~~~~~~~~# gw-hlj-deployment
+~~~~~~~~\# gw-hlj-deployment
 
 ## 1.访问agent.ramdisk
 
@@ -76,8 +76,8 @@ _**Note**_
 
 > _这种做法的不好之处在于index就乱了，不是按顺序增长的，是跳着涨的。_
 
-
 ## 7.集群有计算高可用时遇到的问题及解决办法
+
 ```
 pacemaker服务无法启动：
 pcs resource cleanup --force          强制修复pacemaker
@@ -88,3 +88,8 @@ pcs resource restart hqproxy          使用pcs重启集群服务
 ```
 
 ## 8.
+
+
+
+
+
