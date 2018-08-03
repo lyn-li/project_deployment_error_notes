@@ -57,7 +57,7 @@ ironic node-set-maintenance <UUID> <false|true>
 ironic node-set-provision-state <UUID> manage
 ```
 ##6.
-重新部署机器，用removalpolicy
+重新部署机器，用RemovalPolicy：先移除，然后在heat里就会删掉nova instance，然后把baremetal里设置为available
 ```
 在cloudname.yaml中添加一行：
 ComputeRemovalPolicies: [{'resource_list': ['0', '1', '2']}]
