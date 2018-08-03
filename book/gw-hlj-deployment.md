@@ -51,8 +51,8 @@ vi inspector.ipxe
 ##5.扩容失败
 原因：4台服务器万兆网卡不稳定
 
+```
 ironic node-list
-
 ironic node-set-maintenance <UUID> <false|true>
-
 ironic node-set-privision-state <UUID> manage
+```
