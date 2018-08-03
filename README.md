@@ -2,11 +2,7 @@
 
 ---
 
-##Preface
+## Preface
 
-This file records the error info when deploying.
-
-
-
-
+This file records the error info and notes  when deploying.
 
