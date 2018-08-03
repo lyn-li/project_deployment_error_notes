@@ -54,5 +54,5 @@ vi inspector.ipxe
 ```
 ironic node-list
 ironic node-set-maintenance <UUID> <false|true>
-ironic node-set-privision-state <UUID> manage
+ironic node-set-provision-state <UUID> manage
 ```
