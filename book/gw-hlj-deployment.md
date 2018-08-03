@@ -88,6 +88,9 @@ pcs resource restart hqproxy          使用pcs重启集群服务
 ```
 
 ## 8.
+```
+journalctl -u os-collect-config
+```
 
 
 
