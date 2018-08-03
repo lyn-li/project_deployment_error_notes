@@ -57,11 +57,12 @@ ironic node-set-maintenance <UUID> <false|true>
 ironic node-set-provision-state <UUID> manage
 ironic node-set-power-state <UUID> <on|off>
 ```
-##6.
+##6.重新部署机器方法
 想重新部署机器，用RemovalPolicy：会先移除指定的nova，然后在heat里删掉nova instance，最后把baremetal里设置为available
 ```
 在cloudname.yaml中添加一行：
 ComputeRemovalPolicies: [{'resource_list': ['0', '1', '2']}]
 resource list写上要删除计算节点的index；如果是其他类型的节点，需要根据role name对应改下
-
 ```
+注意：这种做法的不好之处在于index就乱了，不是按顺序增长的，是跳着涨的
+
