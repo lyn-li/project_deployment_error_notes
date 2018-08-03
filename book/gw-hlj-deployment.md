@@ -56,3 +56,11 @@ ironic node-list
 ironic node-set-maintenance <UUID> <false|true>
 ironic node-set-provision-state <UUID> manage
 ```
+##6.
+
+```
+在cloudname.yaml中添加一行：
+ComputeRemovalPolicies: [{'resource_list': ['0', '1', '2']}]
+
+
+```
