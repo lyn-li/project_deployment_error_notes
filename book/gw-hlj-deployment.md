@@ -62,6 +62,6 @@ ironic node-set-power-state <UUID> <on|off>
 ```
 在cloudname.yaml中添加一行：
 ComputeRemovalPolicies: [{'resource_list': ['0', '1', '2']}]
-
+resource list写上要删除计算节点的index；如果是其他类型的节点，需要根据role name对应改下
 
 ```
