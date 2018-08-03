@@ -55,6 +55,7 @@ vi inspector.ipxe
 ironic node-list
 ironic node-set-maintenance <UUID> <false|true>
 ironic node-set-provision-state <UUID> manage
+ironic node-set-power-state <UUID> <on|off>
 ```
 ##6.
 想重新部署机器，用RemovalPolicy：先移除，然后在heat里就会删掉nova instance，然后把baremetal里设置为available
