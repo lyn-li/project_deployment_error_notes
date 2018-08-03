@@ -64,5 +64,6 @@ ironic node-set-power-state <UUID> <on|off>
 ComputeRemovalPolicies: [{'resource_list': ['0', '1', '2']}]
 resource list写上要删除计算节点的index；如果是其他类型的节点，需要根据role name对应改下
 ```
-注意：这种做法的不好之处在于index就乱了，不是按顺序增长的，是跳着涨的
+*__Note__*
+> *这种做法的不好之处在于index就乱了，不是按顺序增长的，是跳着涨的。*
 
