@@ -101,7 +101,7 @@ tar -zcvf <压缩后文件名> <需要压缩的文件或目录>
 
 ## 10.
 
-hdd存储volumes，其余的都存储在ssd池中
+hdd-volumes存储在hdd池中，其余的都存储在ssd池中
 
 ## 11.osd起不来
 
