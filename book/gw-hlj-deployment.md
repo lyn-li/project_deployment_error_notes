@@ -88,18 +88,46 @@ pcs resource restart hqproxy          使用pcs重启集群服务
 ```
 
 ## 8.
+
 ```
 journalctl -u os-collect-config
 ```
+
 ## 9.
+
 ```
 tar -zcvf <压缩后文件名> <需要压缩的文件或目录>
 ```
 
 ## 10.
+
 hdd存储volumes，其余的都存储在ssd池中
 
 ## 11.osd起不来
-服务器未识别到journal盘
+
+服务器未识别到journal盘  
 进不了系统，无法识别raid盘
+
+## 12.手动移除osd
+
+osd正常运行是up 且 in状态
+
+```
+#out之后，ceph开始重新平衡，拷贝此osd上数据到其它osd，此osd状态变为up且out
+ceph osd out 10
+
+#stop osd进程之后，状态变为down 且 out
+systemctl stop ceph-osd@10
+
+#删除 CRUSH 图的对应 OSD 条目，它就不再接收数据了
+ceph osd crush remove osd.10
+
+#移除osd认证key
+ceph auth del osd.10
+
+#从osd中删除osd 10，ceph osd tree中移除
+ceph osd rm 10
+```
+
+
 
