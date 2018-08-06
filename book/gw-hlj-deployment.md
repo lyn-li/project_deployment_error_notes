@@ -96,6 +96,10 @@ journalctl -u os-collect-config
 tar -zcvf <压缩后文件名> <需要压缩的文件或目录>
 ```
 
+## 10.
+hdd存储volumes，其余的都存储在ssd池中
 
-
+## 11.osd起不来
+服务器未识别到journal盘
+进不了系统，无法识别raid盘
 
