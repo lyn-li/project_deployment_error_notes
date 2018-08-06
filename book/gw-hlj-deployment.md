@@ -75,7 +75,7 @@ resource list写上要删除的计算节点的index；如果是其他类型的�
 _**Note**_
 
 > _1.这种做法的不好之处在于index就乱了，不是按顺序增长的，是跳着涨的；_
-> _2.需要跑2遍deploy脚本。第一遍先删除对应的nova，把相应的baremetal设置为available，相当于缩容；第二遍再扩容。_
+> _2.重新部署服务器，需要跑2遍deploy脚本。第一遍先删除对应的nova，把相应的baremetal设置为available，相当于缩容；第二遍再扩容。_
 
 ## 7.集群有计算高可用时遇到的问题及解决办法
 
@@ -130,5 +130,7 @@ osd正常运行是up 且 in状态
 **ceph osd rm 10**
 ```
 
+## 13.overcloud节点出现大量osd up/down
 
-
+overcloud节点出现大量osd up/down，所有节点同时重启后解决（clush -a “sudo systemctl restart ceph-osd.target”），但仍有3台服务器osd down。
+ 其中一台服务器无法启动，raid卡无法找到系统盘，raid问题，硬重启服务器后raid能识别系统盘；一个服务器无法找到ceph日志盘，raid问题，重启服务器后能够识别；一个服务器无法查到问题，能够正常重启，重启后过一段时间osd全部down，怀疑是该硬盘经过多次部署时没有彻底清理磁盘导致，同时发现同批次的HDD盘延迟很高，可能直接导致磁盘读写性能低下。
