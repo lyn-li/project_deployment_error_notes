@@ -1,5 +1,6 @@
 ~~~~~~~~\# gw-hlj-deployment
 
+#遇到的问题
 ## 1.访问agent.ramdisk
 
 [https://docs.openstack.org/tripleo-docs/latest/install/troubleshooting/troubleshooting-nodes.html\#node-registration-problems](https://docs.openstack.org/tripleo-docs/latest/install/troubleshooting/troubleshooting-nodes.html#node-registration-problems)
@@ -62,7 +63,8 @@ ironic node-set-provision-state <UUID> manage
 ironic node-set-power-state <UUID> <on|off>
 ```
 
-## 6.重新部署机器方法
+#学习
+## 1.重新部署机器方法
 
 想重新部署机器，用**RemovalPolicy**：会先移除指定的nova，然后在heat里删掉nova instance，最后把baremetal里设置为available。
 
@@ -77,7 +79,7 @@ _**Note**_
 > _1.这种做法的不好之处在于index就乱了，不是按顺序增长的，是跳着涨的；_
 > _2.重新部署服务器，需要跑2遍deploy脚本。第一遍先删除对应的nova，把相应的baremetal设置为available，相当于缩容；第二遍再扩容。_
 
-## 7.集群有计算高可用时遇到的问题及解决办法
+## 2.集群有计算高可用时遇到的问题及解决办法
 
 ```
 pacemaker服务无法启动：
@@ -88,13 +90,13 @@ pcs resource debug-start rabbitmq     使用pcs重启集群服务
 pcs resource restart hqproxy          使用pcs重启集群服务
 ```
 
-## 8.
+## 3.查看os-collect-config的过程
 
 ```
 journalctl -u os-collect-config
 ```
 
-## 9.
+## 4.压缩
 
 ```
 tar -zcvf <压缩后文件名> <需要压缩的文件或目录>
@@ -134,3 +136,6 @@ osd正常运行是up 且 in状态
 
 overcloud节点出现大量osd up/down，所有节点同时重启后解决（clush -a “sudo systemctl restart ceph-osd.target”），但仍有3台服务器osd down。
  其中一台服务器无法启动，raid卡无法找到系统盘，raid问题，硬重启服务器后raid能识别系统盘；一个服务器无法找到ceph日志盘，raid问题，重启服务器后能够识别；一个服务器无法查到问题，能够正常重启，重启后过一段时间osd全部down，怀疑是该硬盘经过多次部署时没有彻底清理磁盘导致，同时发现同批次的HDD盘延迟很高，可能直接导致磁盘读写性能低下。
+
+
+# 黑龙江
