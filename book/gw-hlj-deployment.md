@@ -111,16 +111,11 @@ journalctl -u os-collect-config
 tar -zcvf <压缩后文件名> <需要压缩的文件或目录>
 ```
 
-## 10.
+## 5.
 
 hdd-volumes存储在hdd池中，其余的都存储在ssd池中
 
-## 11.osd起不来
-
-服务器未识别到journal盘  
-进不了系统，无法识别raid盘
-
-## 12.手动移除osd
+## 6.手动移除osd
 
 osd正常运行是up 且 in状态
 
@@ -141,10 +136,6 @@ osd正常运行是up 且 in状态
 **ceph osd rm 10**
 ```
 
-## 13.overcloud节点出现大量osd up/down
 
-overcloud节点出现大量osd up/down，所有节点同时重启后解决（clush -a “sudo systemctl restart ceph-osd.target”），但仍有3台服务器osd down。
- 其中一台服务器无法启动，raid卡无法找到系统盘，raid问题，硬重启服务器后raid能识别系统盘；一个服务器无法找到ceph日志盘，raid问题，重启服务器后能够识别；一个服务器无法查到问题，能够正常重启，重启后过一段时间osd全部down，怀疑是该硬盘经过多次部署时没有彻底清理磁盘导致，同时发现同批次的HDD盘延迟很高，可能直接导致磁盘读写性能低下。
-
-
-# 黑龙江
+# 注意事项
+##1.种子节点安装镜像用CentOS-7-x86_64-Minimal-1804.iso
