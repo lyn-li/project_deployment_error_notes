@@ -63,6 +63,12 @@ ironic node-set-provision-state <UUID> manage
 ironic node-set-power-state <UUID> <on|off>
 ```
 
+## 6.osd起不来
+
+服务器未识别到journal盘  
+进不了系统，无法识别raid盘
+
+
 #学习
 ## 1.重新部署机器方法
 
