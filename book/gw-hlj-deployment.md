@@ -138,4 +138,4 @@ osd正常运行是up 且 in状态
 
 
 # 注意事项
-##1.种子节点安装镜像用CentOS-7-x86_64-Minimal-1804.iso，否则包会有依赖问题
+##1.如果源用production的源，那么种子节点安装镜像用CentOS-7-x86_64-Minimal-1804.iso，否则包会有依赖问题
