@@ -111,7 +111,7 @@ journalctl -u os-collect-config
 tar -zcvf <压缩后文件名> <需要压缩的文件或目录>
 ```
 
-### 5.
+### 5.ruleset
 
 hdd-volumes存储在hdd池中，其余的都存储在ssd池中
 
