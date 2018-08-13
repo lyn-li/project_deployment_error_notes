@@ -1,4 +1,4 @@
-~~~~~~~~\# gw-hlj-deployment
+# gw-hlj-deployment
 
 #遇到的问题
 ## 1.访问agent.ramdisk
