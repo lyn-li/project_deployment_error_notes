@@ -58,3 +58,9 @@ Used memory:    524288 KiB
 Max memory:     1048432 KiB
 Used memory:    1048432 KiB
 ```
+查看当前CPU个数
+```
+[root@kvm01 ~]# virsh dominfo vm1-clone | grep CPU
+CPU(s):         2
+CPU time:       15.0s
+```
