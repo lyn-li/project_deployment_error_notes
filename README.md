@@ -4,5 +4,5 @@
 
 ## Preface
 
-This file records the error info and notes  when deploying.In addition,it also has my study notes.
+This file records the error info and notes  when deploying.In addition,there are also my study notes.
 
