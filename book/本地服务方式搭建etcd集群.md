@@ -43,9 +43,10 @@ WantedBy=multi-user.target
 执行如下命令:
 
 **设置服务自启动**
-systemctl enable /etc/systemd/system/etcd2.service
+$ systemctl enable /etc/systemd/system/etcd2.service
+Created symlink from /etc/systemd/system/multi-user.target.wants/etcd2.service to /etc/systemd/system/etcd2.service.
 **启动etcd2**
-systemctl restart etcd2.service
+$ systemctl restart etcd2.service
 
 ###172.18.6.102 etcd1
 
