@@ -76,7 +76,7 @@ WantedBy=multi-user.target
 **设置服务自启动**
 $ systemctl enable /etc/systemd/system/etcd2.service
 **启动etcd2**
-$ systemctl start etcd2.service
+$ systemctl restart etcd2.service
 
 ###172.18.6.103 etcd2
 
@@ -106,7 +106,7 @@ WantedBy=multi-user.target
 **设置服务自启动**
 $ systemctl enable /etc/systemd/system/etcd2.service
 **启动etcd2**
-$ systemctl start etcd2.service
+$ systemctl restart etcd2.service
 
 ##集群检查
 
