@@ -139,9 +139,9 @@ WantedBy=multi-user.target
 执行如下命令:
 
 **设置服务自启动**
-systemctl enable /etc/systemd/system/etcd2.service
+$ systemctl enable /etc/systemd/system/etcd2.service
 **启动etcd2**
-systemctl restart etcd2.service
+$ systemctl restart etcd2.service
 
 ##测试代理
 
