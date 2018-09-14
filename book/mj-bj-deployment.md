@@ -18,5 +18,16 @@ ctrl+v进入可视块模式
 批量插入：按G到文件最后一行，I-行首插入，A-行尾插入
 批量删除：选中需要删除的字段，按D
 
+### 4.Linux下如何查看版本信息， 包括位数、版本信息以及CPU内核信息、CPU具体型号等等，整个CPU信息一目了然
+#### 1.# uname －a   （Linux查看版本当前操作系统内核信息）
+
+#### 2.# cat /proc/version （Linux查看当前操作系统版本信息）
+
+#### 3.# cat /etc/issue  或cat /etc/redhat-release（Linux查看版本当前操作系统发行版信息）
+
+#### 4.
+
 ## 注意事项
 ### 1.设置undercloud的软件源的时候是在stack用户下操作
+
+### 2.opsserver虚机用1611的镜像
