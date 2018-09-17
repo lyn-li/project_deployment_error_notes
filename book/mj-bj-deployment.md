@@ -29,7 +29,7 @@ ctrl+v进入可视块模式
 
 #### 5.# getconf LONG_BIT  （Linux查看版本说明当前CPU运行在32bit模式下， 但不代表CPU不支持64bit）
 
-#### 6.# lsb_release -a
+#### 6.# lsb_release -a  （查询系统版本）
 
 ## 注意事项
 ### 1.设置undercloud的软件源的时候是在stack用户下操作
