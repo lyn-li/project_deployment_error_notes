@@ -10,15 +10,20 @@
 ### 1.controller节点的网关起在external上，其他节点的网关都起在pxe上
 
 ### 2.awk
+```
 nova list | awk '{print $12}'
 虚线也算一列
+```
 
 ### 3.vim批量操作技巧
+```
 ctrl+v进入可视块模式
 批量插入：按G到文件最后一行，I-行首插入，A-行尾插入
 批量删除：选中需要删除的字段，按D
+```
 
 ### 4.Linux下如何查看版本信息， 包括位数、版本信息以及CPU内核信息、CPU具体型号等等，整个CPU信息一目了然
+```
 #### 1.# uname －a   （Linux查看版本当前操作系统内核信息）
 
 #### 2.# cat /proc/version （Linux查看当前操作系统版本信息）
@@ -30,13 +35,16 @@ ctrl+v进入可视块模式
 #### 5.# getconf LONG_BIT  （Linux查看版本说明当前CPU运行在32bit模式下， 但不代表CPU不支持64bit）
 
 #### 6.# lsb_release -a  （查询系统版本）
+```
 
 ### 5.VNC登录映射公网地址而非内网地址
 登录计算节点
-vim /etc/nova/nova.conf
+
+```
+[root@overcloud-novacompute-1 ~]# vim /etc/nova/nova.conf
 [vnc]
 novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
-
+```
 重启openstack-nova-compute服务
 
 ## 注意事项
