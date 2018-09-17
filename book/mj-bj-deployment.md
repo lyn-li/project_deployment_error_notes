@@ -31,6 +31,14 @@ ctrl+v进入可视块模式
 
 #### 6.# lsb_release -a  （查询系统版本）
 
+### 5.VNC登录映射公网地址而非内网地址
+登录计算节点
+vim /etc/nova/nova.conf
+[vnc]
+novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
+
+重启openstack-nova-compute服务
+
 ## 注意事项
 ### 1.设置undercloud的软件源的时候是在stack用户下操作
 
