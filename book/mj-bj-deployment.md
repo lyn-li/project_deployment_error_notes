@@ -47,6 +47,15 @@ novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 ```
 重启openstack-nova-compute服务
 
+### 6.查看baremetal中的各种信息
+```
+查看网卡信息
+[stack@undercloud baremetal_info]$ cat compute-0.json | jq '.all_interfaces' 
+查看哪些网卡是已经插线的网卡
+[stack@undercloud baremetal_info]$ cat compute-0.json | jq '.extra.network|.[] | select(.link=="yes").serial'
+
+```
+
 ## 注意事项
 ### 1.设置undercloud的软件源的时候是在stack用户下操作
 
