@@ -55,6 +55,8 @@ novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 [stack@undercloud baremetal_info]$ cat compute-0.json | jq '.extra.network|.[] | select(.link=="yes").serial'
 查看system-product-name
 [stack@undercloud baremetal_info]$ cat compute-0.json | jq .inventory.system_vendor.product_name
+查看服务器主机板号
+[stack@undercloud baremetal_info]$ cat compute-0.json | jq .extra.system.product.uuid
 ```
 
 ## 注意事项
