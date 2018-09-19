@@ -3,19 +3,26 @@
 ## 遇到的问题
 
 ### 1.自检一直在刷LLDP
+
 解决办法：交换机开启LLDP
+
+### 2.西安poc项目step3报错
+![](/assets/step3_error.png)
+原因：交换机没有配置巨型帧（mtu 9000），导致超时。
 
 ## 学习
 
 ### 1.controller节点的网关起在external上，其他节点的网关都起在pxe上
 
 ### 2.awk
+
 ```
 nova list | awk '{print $12}'
 虚线也算一列
 ```
 
 ### 3.vim批量操作技巧
+
 ```
 ctrl+v进入可视块模式
 批量插入：按G到文件最后一行，I-行首插入，A-行尾插入
@@ -23,6 +30,7 @@ ctrl+v进入可视块模式
 ```
 
 ### 4.Linux下如何查看版本信息， 包括位数、版本信息以及CPU内核信息、CPU具体型号等等，整个CPU信息一目了然
+
 ```
 #### 1.# uname －a   （Linux查看版本当前操作系统内核信息）
 
@@ -38,6 +46,7 @@ ctrl+v进入可视块模式
 ```
 
 ### 5.VNC登录映射公网地址而非内网地址
+
 登录计算节点
 
 ```
@@ -45,9 +54,11 @@ ctrl+v进入可视块模式
 [vnc]
 novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 ```
+
 重启openstack-nova-compute服务
 
 ### 6.查看baremetal中的各种信息
+
 ```
 查看网卡信息
 [stack@undercloud baremetal_info]$ cat compute-0.json | jq '.all_interfaces' 
@@ -66,9 +77,14 @@ novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 ```
 
 ### 7.mtu的配置
+
 交换机上pxe和ipmi对应的网卡不需要配置mtu 9000，其他的网卡需要配置
 
 ## 注意事项
+
 ### 1.设置undercloud的软件源的时候是在stack用户下操作
 
 ### 2.opsserver虚机用1611的镜像
+
+
+
