@@ -66,7 +66,7 @@ novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 ```
 
 ### 7.mtu的配置
-交换机上pxe和ipmi的对应的网口不需要配置mtu 9000，其他的需要配置
+交换机上pxe和ipmi对应的网口不需要配置mtu 9000，其他的需要配置
 
 ## 注意事项
 ### 1.设置undercloud的软件源的时候是在stack用户下操作
