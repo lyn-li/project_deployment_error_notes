@@ -80,6 +80,18 @@ novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 
 交换机上pxe和ipmi对应的网卡不需要配置mtu 9000，其他的网卡需要配置
 
+### 8.admin密码的修改
+
+* 1.修改三台控制节点/opt/kunkka/configs/server.json:  "admin_password":
+* 2.重启kunkka服务：systemctl restart kunkka
+* 3.修改overcloudrc文件中的密码
+* 4.vim /home/stack/templates/environments/cloudname.yaml
+添加：
+```
+parameter_defaults:
+  AdminPassword: "uMHNCDeNa8eezmwY3kJZwQuyr.2"
+```
+
 ## 注意事项
 
 ### 1.设置undercloud的软件源的时候是在stack用户下操作
