@@ -13,6 +13,11 @@
 ### 4.手动创建osd，ceph集群数据始终无法同步
 ![](/assets/ceph-s.png)
 
+
+### 5.一个节点的域名是help
+手动修改域名hostnamectl set-hostname --transient overcloud-controller-1.localdomain
+### 6.rabbitmq因为主机名更改导致连接不上
+
 ## 学习
 
 ### 1.ceph相关
