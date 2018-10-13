@@ -7,7 +7,11 @@
 ### 2.由于联想Lenovo X3650 M5服务器的远程控制需要激活key，所以我们选择用U盘来装系统，磁盘有遗留数据，进入救援模式清除磁盘数据。第一次没有安装成功，可能是因为数据没有清除干净，进行第二次安装，成功
 
 ### 3.自检失败，2个服务器dhcp获取不到ip，1个服务器可以获取到ip，但是tftp open timeout
+
 原因：交换机bond模式没有配置动态链路聚合，华为交换机默认模式是mode manual
+
+### 4.手动创建osd，ceph集群数据始终无法同步
+![](/assets/ceph-s.png)
 
 ## 学习
 
@@ -16,14 +20,16 @@
 ceph health detail
 
 ### 2.手动创建osd
+
 ```
 ceph-disk prepare /dev/sdb
 ceph-disk activate /dev/sdb1
 ceph-disk list
 ```
 
-
 ## 注意事项
 
 ### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD，所以ceph集群中一个osd都没有
+
+
 
