@@ -102,5 +102,14 @@ parameter_defaults:
 
 ### 2.opsserver虚机用1611的镜像
 
+### 3.跑监控脚本一直卡在zabbix_agent/install zabbix_plugin这个task
+$ sudo vim roles/zabbix-agent/tasks/main.yaml
+在- name: Install zabbix-plugin
+  yum: name=zabbix_plugin state=latest下面加上一行：
+tags: install_zabbix_plugin
+
+然后重新运行ansible脚本
+$ ansible-playbook playbook-opsserver.yml -s --skip-tags=install_zabbix_plugin
+
 
 
