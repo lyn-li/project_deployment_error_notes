@@ -15,11 +15,29 @@
 
 
 ### 5.一个节点的域名是help
-手动修改域名hostnamectl set-hostname --transient overcloud-controller-1.localdomain
+手动修改域名：hostnamectl set-hostname --transient overcloud-controller-1.localdomain
 但是出现了另外一个问题，问题6
 
 ### 6.rabbitmq因为主机名更改导致连接不上
-应该直接重启服务器就可以了。（具体可不可以没有尝试过）
+[root@overcloud-controller-1 ~]# rabbitmqctl cluster_status
+Cluster status of node rabbit@help ...
+Error: unable to connect to node rabbit@help: nodedown
+
+DIAGNOSTICS
+===========
+
+attempted to contact: [rabbit@help]
+
+rabbit@help:
+  * unable to connect to epmd (port 4369) on help: nxdomain (non-existing domain)
+
+
+current node details:
+- node name: 'rabbitmq-cli-90@overcloud-controller-1'
+- home dir: /var/lib/rabbitmq
+- cookie hash: yq6dFC+bFxNqFzer4fN+GA==
+
+**应该直接重启服务器就可以了。（具体可不可以没有尝试过）**
 
 ## 学习
 
