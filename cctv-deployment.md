@@ -16,7 +16,10 @@
 
 ### 5.一个节点的域名是help
 手动修改域名hostnamectl set-hostname --transient overcloud-controller-1.localdomain
+但是出现了另外一个问题，问题6
+
 ### 6.rabbitmq因为主机名更改导致连接不上
+应该直接重启服务器就可以了。（具体可不可以没有尝试过）
 
 ## 学习
 
