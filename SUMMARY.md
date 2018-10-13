@@ -5,4 +5,5 @@
 * [CentOS7.1 KVM虚拟化之虚拟机内存、CPU调整](book/CentOS7.1 KVM虚拟化之虚拟机内存、CPU调整.md)
 * [本地服务方式搭建etcd集群](book/本地服务方式搭建etcd集群.md)
 * [mj-bj-deployment](book/mj-bj-deployment.md)
+* [cctv-deployment](cctv-deployment.md)
 
