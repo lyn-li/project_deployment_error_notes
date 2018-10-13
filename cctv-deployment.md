@@ -23,4 +23,7 @@ ceph-disk list
 ```
 
 
+## 注意事项
+
+### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD 
 
