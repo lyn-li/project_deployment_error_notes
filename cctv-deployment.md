@@ -53,7 +53,7 @@ ceph-disk activate /dev/sdb1
 ceph-disk list
 ```
 
-### 3.
+### 3.抓包
 tcpdump -envi vnet0 icmp or arp
 
 ## 注意事项
