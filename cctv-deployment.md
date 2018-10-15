@@ -63,6 +63,6 @@ tcpdump -envi vnet0 icmp or arp
 
 ### 2.1804镜像太慢
 
-### 3.ceontos-release的包不是最新，导致openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源，导致undercloud安装失败
+### 3.ceontos-release的包不是最新，在openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源，导致undercloud安装失败
 
 ### 4.undercloud虚机重启之后网络被cloud-init刷回去了，需要卸掉cloud-init
