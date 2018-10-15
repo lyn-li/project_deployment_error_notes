@@ -80,6 +80,8 @@ novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 
 交换机上pxe和ipmi对应的网卡不需要配置mtu 9000，其他的网卡需要配置
 
+交换机上pxe和ipmi对应的网口设置stp
+
 ### 8.admin密码的修改
 有两种方法：
 1.直接修改kunkka和overcloudrc的密码（此方法不能用于生产环境）
