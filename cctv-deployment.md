@@ -61,4 +61,6 @@ tcpdump -envi vnet0 icmp or arp
 ### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD，所以ceph集群中一个osd都没有
 
 
+### 2.1804镜像太慢
 
+### 3.ceontos-release的包不是最新，导致openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源
