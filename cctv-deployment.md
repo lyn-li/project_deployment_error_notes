@@ -59,6 +59,8 @@ tcpdump -envi vnet0 icmp or arp
 ### 4.断点续传
 rsync --delete -aPL ${RSYNC_URL} ${REPO_CACHE_DIR}
 
+rsync --delete -aPL /opt/repos/production /mnt/sync_repo_dir1/repos
+
 rsync -aP ${REPO_CACHE_DIR} ${mount_point}
 
 ## 注意事项
