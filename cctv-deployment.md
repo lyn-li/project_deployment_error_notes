@@ -73,3 +73,5 @@ rsync -aP ${REPO_CACHE_DIR} ${mount_point}
 ### 3.ceontos-release的包不是最新，在openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源，导致undercloud安装失败
 
 ### 4.undercloud虚机重启之后网络被cloud-init刷回去了，需要卸掉cloud-init
+
+### 5.种子节点关闭NetworkManager
