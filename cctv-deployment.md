@@ -56,6 +56,11 @@ ceph-disk list
 ### 3.抓包
 tcpdump -envi vnet0 icmp or arp
 
+### 4.断点续传
+rsync --delete -aPL ${RSYNC_URL} ${REPO_CACHE_DIR}
+
+rsync -aP ${REPO_CACHE_DIR} ${mount_point}
+
 ## 注意事项
 
 ### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD，所以ceph集群中一个osd都没有
