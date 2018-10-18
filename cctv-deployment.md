@@ -11,31 +11,33 @@
 原因：交换机bond模式没有配置动态链路聚合，华为交换机默认模式是mode manual
 
 ### 4.手动创建osd，ceph集群数据始终无法同步
+
 ![](/assets/ceph-s.png)
 
-
 ### 5.一个节点的域名是help
-手动修改域名：hostnamectl set-hostname --transient overcloud-controller-1.localdomain
+
+手动修改域名：hostnamectl set-hostname --transient overcloud-controller-1.localdomain  
 但是出现了另外一个问题，问题6
 
 ### 6.rabbitmq因为主机名更改导致连接不上
-[root@overcloud-controller-1 ~]# rabbitmqctl cluster_status
-Cluster status of node rabbit@help ...
+
+\[root@overcloud-controller-1 ~\]\# rabbitmqctl cluster\_status  
+Cluster status of node rabbit@help ...  
 Error: unable to connect to node rabbit@help: nodedown
 
-DIAGNOSTICS
-===========
+# DIAGNOSTICS
 
-attempted to contact: [rabbit@help]
+attempted to contact: \[rabbit@help\]
 
 rabbit@help:
-  * unable to connect to epmd (port 4369) on help: nxdomain (non-existing domain)
 
+* unable to connect to epmd \(port 4369\) on help: nxdomain \(non-existing domain\)
 
 current node details:
-- node name: 'rabbitmq-cli-90@overcloud-controller-1'
-- home dir: /var/lib/rabbitmq
-- cookie hash: yq6dFC+bFxNqFzer4fN+GA==
+
+* node name: 'rabbitmq-cli-90@overcloud-controller-1'
+* home dir: /var/lib/rabbitmq
+* cookie hash: yq6dFC+bFxNqFzer4fN+GA==
 
 **应该直接重启服务器就可以了。（具体可不可以没有尝试过）**
 
@@ -54,19 +56,32 @@ ceph-disk list
 ```
 
 ### 3.抓包
+
 tcpdump -envi vnet0 icmp or arp
 
 ### 4.断点续传
-rsync --delete -aPL ${RSYNC_URL} ${REPO_CACHE_DIR}
 
-rsync --delete -aPL /opt/repos/production /mnt/sync_repo_dir1/repos
+rsync --delete -aPL ${RSYNC\_URL} ${REPO\_CACHE\_DIR}
 
-rsync -aP ${REPO_CACHE_DIR} ${mount_point}
+rsync --delete -aPL /opt/repos/production /mnt/sync\_repo\_dir1/repos
+
+rsync -aP ${REPO\_CACHE\_DIR} ${mount\_point}
+
+
+
+5.
+
+ctl: overcloud-controller-\[0-2\]
+
+comp: overcloud-novacompute-\[0-11\]
+
+bigdata: overcloud-bigdata-\[0-5\]
+
+all: @ctl,@comp,@bigdata
 
 ## 注意事项
 
 ### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD，所以ceph集群中一个osd都没有
-
 
 ### 2.1804镜像太慢
 
@@ -75,3 +90,6 @@ rsync -aP ${REPO_CACHE_DIR} ${mount_point}
 ### 4.undercloud虚机重启之后网络被cloud-init刷回去了，需要卸掉cloud-init
 
 ### 5.种子节点关闭NetworkManager
+
+
+
