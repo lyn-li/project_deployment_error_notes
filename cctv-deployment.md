@@ -70,12 +70,9 @@ rsync -aP ${REPO\_CACHE\_DIR} ${mount\_point}
 
 ### 5.vim /etc/clustershell/groups
 
-ctl: overcloud-controller-\[0-2\]
-
-comp: overcloud-novacompute-\[0-11\]
-
-bigdata: overcloud-bigdata-\[0-5\]
-
+ctl: overcloud-controller-[0-2]
+comp: overcloud-novacompute-[0-11]
+bigdata: overcloud-bigdata-[0-5]
 all: @ctl,@comp,@bigdata
 
 ## 注意事项
