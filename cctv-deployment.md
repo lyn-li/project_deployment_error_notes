@@ -68,8 +68,7 @@ rsync --delete -aPL /opt/repos/production /mnt/sync\_repo\_dir1/repos
 rsync -aP ${REPO\_CACHE\_DIR} ${mount\_point}
 
 
-
-5.
+### 5.vim /etc/clustershell/groups
 
 ctl: overcloud-controller-\[0-2\]
 
