@@ -6,16 +6,6 @@
 
 原因：交换机bond模式没有配置动态链路聚合，华为交换机默认模式是mode manual
 
-### 4.手动创建osd，ceph集群数据始终无法同步
-
-![](/assets/ceph-s.png)
-
-### 5.一个节点的域名是help
-
-手动修改域名：hostnamectl set-hostname --transient overcloud-controller-1.localdomain  
-但是出现了另外一个问题，问题6
-
-
 
 ## 学习
 
@@ -34,14 +24,6 @@ ceph-disk list
 ### 3.抓包
 
 tcpdump -envi vnet0 icmp or arp
-
-### 4.断点续传
-
-rsync --delete -aPL ${RSYNC\_URL} ${REPO\_CACHE\_DIR}
-
-rsync --delete -aPL /opt/repos/production /mnt/sync\_repo\_dir1/repos
-
-rsync -aP ${REPO\_CACHE\_DIR} ${mount\_point}
 
 
 ### 5.vim /etc/clustershell/groups
