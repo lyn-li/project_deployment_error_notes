@@ -18,7 +18,13 @@ all: @ctl,@comp,@bigdata
 ## 注意事项
 
 ### 1.ceontos-release的包不是最新，在openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源，导致undercloud安装失败
-解决办法：sudo yum clean all && sudo yum makecache 之后 sudo yum update -y
+```
+解决办法：
+$sudo rm -rf /etc/yum.repos.d/*
+$sudo scp root@10.3.106.19:/etc/yum.repos.d/ustack.repo /etc/yum.repos.d/ustack.repo
+$sudo yum clean all && sudo yum makecache
+$sudo yum update -y
+```
 
 ### 4.undercloud虚机重启之后网络被cloud-init刷回去了，需要卸掉cloud-init
 
