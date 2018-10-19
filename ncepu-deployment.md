@@ -26,9 +26,7 @@ $sudo yum clean all && sudo yum makecache
 $sudo yum update -y
 ```
 
-### 4.undercloud虚机重启之后网络被cloud-init刷回去了，需要卸掉cloud-init
-
-### 5.种子节点关闭NetworkManager，因为有可能ovs起不来
+### 2.种子节点关闭NetworkManager，因为有可能ovs起不来
 
 ## 信息
 
