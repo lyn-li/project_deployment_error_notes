@@ -76,15 +76,19 @@ all: @ctl,@comp,@bigdata
 
 ## 注意事项
 
-### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD，所以ceph集群中一个osd都没有
-
-### 2.1804镜像太慢
-
-### 3.ceontos-release的包不是最新，在openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源，导致undercloud安装失败
+### 1.ceontos-release的包不是最新，在openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源，导致undercloud安装失败
+解决办法：
 
 ### 4.undercloud虚机重启之后网络被cloud-init刷回去了，需要卸掉cloud-init
 
 ### 5.种子节点关闭NetworkManager，因为有可能ovs起不来
 
+## 信息
 
+container-1-1  -->  overcloud-novacompute-6
+container-2-1  -->  overcloud-novacompute-3
+container-3-1  -->  overcloud-novacompute-9
+container-1-2  -->  overcloud-novacompute-2
+container-2-2  -->  overcloud-novacompute-8
+container-3-2  -->  overcloud-novacompute-7
 
