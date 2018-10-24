@@ -27,8 +27,7 @@ $sudo yum update -y
 
 ### 2.种子节点关闭NetworkManager，因为有可能ovs起不来
 
-### 3.
-实施关键结果：
+### 3.实施关键结果确认：
 ```
 1. 虚拟机的MTU确保是1500
 2. Ceph的Crushmap确保是跨机柜三副本
