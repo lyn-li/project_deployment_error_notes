@@ -14,6 +14,8 @@ comp: overcloud-novacompute-[0-11]
 bigdata: overcloud-bigdata-[0-5]
 all: @ctl,@comp,@bigdata
 
+### 2.fping -s 10.112.93.32 10.112.93.89
+
 ## 注意事项
 
 ### 1.ceontos-release的包不是最新，在openstack undercloud install的时候/etc/yum.repos.d/中刷出了原始源，导致undercloud安装失败
