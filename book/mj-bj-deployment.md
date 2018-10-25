@@ -78,7 +78,7 @@ novncproxy_base_url=http://218.25.208.4:6080/vnc_auto.html
 
 ### 7.mtu的配置
 
-交换机上pxe和ipmi对应的网卡不需要配置mtu 9000，其他的网卡需要配置
+交换机上pxe和ipmi对应的网卡不需要配置mtu 9000，其他的网卡需要配置。万兆交换机聚合物理接口配置mtu>=9000,9216
 
 交换机上pxe对应的网口设置stp
 
