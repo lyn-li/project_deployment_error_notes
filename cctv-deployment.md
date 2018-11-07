@@ -74,6 +74,13 @@ comp: overcloud-novacompute-[0-11]
 bigdata: overcloud-bigdata-[0-5]
 all: @ctl,@comp,@bigdata
 
+### 6.crontab定时任务
+crontab -e
+```
+*/1 * * * * bash /home/stack/instance-ha.sh &>/dev/null 2>&1
+```
+每分钟执行一次脚本
+
 ## 注意事项
 
 ### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD，所以ceph集群中一个osd都没有
