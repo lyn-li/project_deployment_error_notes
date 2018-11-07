@@ -75,7 +75,7 @@ bigdata: overcloud-bigdata-[0-5]
 all: @ctl,@comp,@bigdata
 
 ### 6.crontab定时任务
-crontab -e
+$ crontab -e
 ```
 */1 * * * * bash /home/stack/instance-ha.sh &>/dev/null 2>&1
 ```
