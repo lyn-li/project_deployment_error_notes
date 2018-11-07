@@ -79,7 +79,7 @@ crontab -e
 ```
 */1 * * * * bash /home/stack/instance-ha.sh &>/dev/null 2>&1
 ```
-每分钟执行一次脚本
+每分钟执行一次脚本，重定向到空设备文件
 
 ## 注意事项
 
