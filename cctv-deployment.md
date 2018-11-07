@@ -81,6 +81,8 @@ crontab -e
 ```
 每分钟执行一次脚本，重定向到空设备文件
 
+查看定时任务执行的日志：/var/log/cron
+
 ## 注意事项
 
 ### 1.role文件controller.yaml中竟然没有配置：- OS::TripleO::Services::CephOSD，所以ceph集群中一个osd都没有
